@@ -10,9 +10,9 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar dark>
+    <v-toolbar color="primary">
       <v-toolbar-side-icon @click="visible = !visible"/>
-      <router-link :to="{name: 'LandingPage'}" class="display-1" style="text-decoration: none;">
+      <router-link :to="{name: 'LandingPage'}" class="display-1 white--text" style="text-decoration: none;">
         timgrohmann.de
       </router-link>
     </v-toolbar>

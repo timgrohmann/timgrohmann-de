@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app dark>
     <HeaderBar/>
     <v-content>
       <v-container grid-list-md >
