@@ -1,10 +1,10 @@
 <template>
   <v-card>
     <v-card-title>
-      <div class="headline">Das wird &exist;WM!</div>
+      <div class="headline">Das wird timgrohmann.de</div>
     </v-card-title>
-    <v-card-text>Auf dieser Seite wird &exist;WM, das tolle Wissensmanagementsystem
-      entstehen! Seid gespannt.
+    <v-card-text>
+      Hier wird aktuell gebaut.
     </v-card-text>
   </v-card>
 </template>

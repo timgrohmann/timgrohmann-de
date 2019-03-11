@@ -12,28 +12,9 @@
     </v-navigation-drawer>
     <v-toolbar dark>
       <v-toolbar-side-icon @click="visible = !visible"/>
-      <router-link :to="{name: 'LandingPage'}" class="v-responsive" style="max-height: 100%">
-        <v-img src="ewm.svg" max-height="100%" position="left center" contain/>
+      <router-link :to="{name: 'LandingPage'}" class="display-1" style="text-decoration: none;">
+        timgrohmann.de
       </router-link>
-      <v-spacer />
-      <v-menu nudge-bottom="40">
-        <v-btn slot="activator" icon>
-          <v-icon>apps</v-icon>
-        </v-btn>
-        <v-container grid-list-xs="2" style="background-color: white">
-          <v-layout row wrap>
-            <v-flex
-              v-for="icon in icons"
-              :key="icon"
-              xs4
-              text-md-center
-            >
-              <v-icon medium color="primary">{{icon}}</v-icon>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </v-menu>
-      
     </v-toolbar>
   </div>
 </template>
@@ -42,11 +23,7 @@
 export default {
   data: () => ({
     items: [
-      { icon: "face", name: "Über uns", link: {name: "AboutUs"} },
-      { icon: "search", name: "Suche" }
-    ],
-    icons: [
-      "search", "person", "contacts", "tv", "favorite", "phone", "home", "pause", "stop"
+      { icon: "face", name: "Über mich", link: {name: "AboutMe"} },
     ],
     visible: false
   })

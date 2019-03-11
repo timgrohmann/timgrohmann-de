@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import LandingPage from './components/LandingPage.vue'
-import AboutUs from './components/AboutUs.vue'
+import AboutMe from './components/AboutMe.vue'
 
 Vue.use(Router);
 
@@ -17,10 +17,10 @@ export default new Router({
             }
         },
         {
-            path: '/about-us',
-            name: 'AboutUs',
+            path: '/about-me',
+            name: 'AboutMe',
             components: {
-                default: AboutUs,
+                default: AboutMe,
             }
         }
     ]
