@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 const path = require('path');
 
 
@@ -15,6 +16,10 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -35,10 +40,6 @@ module.exports = {
           'css-loader',
           'stylus-loader'
         ]
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader'
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -62,6 +63,9 @@ module.exports = {
       template: 'src/index.html',
       filename: 'index.html',
       inject: true
+    }),
+    new webpack.DefinePlugin({
+      "process.env.VERSION_NUMBER": JSON.stringify(require('./package.json').version)
     }),
     new CopyWebpackPlugin([{ from: 'static', to: '.' }])
   ]

@@ -6,6 +6,10 @@
         <router-view />
       </v-container>
     </v-content>
+    <v-footer class="pa-2">
+      <v-spacer></v-spacer>
+      <div>v{{version}} &copy; {{ new Date().getFullYear() }}</div>
+    </v-footer>
   </v-app>
 </template>
 
@@ -19,7 +23,7 @@ export default {
   },
   data () {
     return {
-      //
+      version: process.env.VERSION_NUMBER //eslint-disable-line
     }
   }
 }
