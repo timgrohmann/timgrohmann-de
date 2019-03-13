@@ -53,7 +53,7 @@ module.exports = {
   },
   plugins: [
     // make sure to include the plugin for the magic
-    new CleanWebpackPlugin(),
+    //new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'app.[hash].css',
       chunkFilename: '[id].css'

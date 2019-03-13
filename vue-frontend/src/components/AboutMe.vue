@@ -19,6 +19,7 @@
           B 7 14<br>
           68159 Mannheim
         </p>
+        <p>Du kannst mich unter <a href="mailto:kontakt@timgrohmann.de">kontakt@timgrohmann.de</a> erreichen.</p>
       </v-card-text>
     </v-card>
   </div>

@@ -1,13 +1,12 @@
 {
   "name": "timgrohmann-de",
-  "version": "0.0.6",
+  "version": "0.0.11",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --mode development --hot",
-    "build": "npm version patch && webpack --mode production"
+    "build": "rm -rf dist/* && npm version patch && webpack --mode production"
   },
   "dependencies": {
-    "mini-css-extract-plugin": "^0.5.0",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2",
     "vuetify": "^1.5.5",
@@ -39,7 +38,8 @@
     "vue-template-compiler": "^2.6.8",
     "vuetify-loader": "^1.0.5",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "mini-css-extract-plugin": "^0.5.0"
   },
   "eslintConfig": {
     "root": true,
