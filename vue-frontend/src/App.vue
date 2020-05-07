@@ -1,8 +1,8 @@
 <template>
-  <v-app dark>
-    <HeaderBar/>
+  <v-app>
+    <HeaderBar />
     <v-content>
-      <v-container grid-list-md >
+      <v-container grid-list-md>
         <router-view />
       </v-container>
     </v-content>
@@ -14,17 +14,17 @@
 </template>
 
 <script>
-import HeaderBar from './components/HeaderBar.vue'
+import HeaderBar from "./components/HeaderBar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HeaderBar
   },
-  data () {
+  data() {
     return {
       version: process.env.VERSION_NUMBER //eslint-disable-line
-    }
+    };
   }
-}
+};
 </script>

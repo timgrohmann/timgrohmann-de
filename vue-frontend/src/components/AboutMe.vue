@@ -11,15 +11,16 @@
         <div class="headline">Impressum</div>
       </v-card-title>
       <v-card-text>
+        <p>Diese Seite wird betrieben von:</p>
         <p>
-          Diese Seite wird betrieben von:
+          Tim Grohmann
+          <br />T 6 10
+          <br />68161 Mannheim
         </p>
         <p>
-          Tim Grohmann<br>
-          B 7 14<br>
-          68159 Mannheim
+          Du kannst mich unter
+          <a href="mailto:kontakt@timgrohmann.de">kontakt@timgrohmann.de</a> erreichen.
         </p>
-        <p>Du kannst mich unter <a href="mailto:kontakt@timgrohmann.de">kontakt@timgrohmann.de</a> erreichen.</p>
       </v-card-text>
     </v-card>
   </div>
@@ -29,20 +30,20 @@
 export default {
   data() {
     return {
-        people: [
-            {
-                name: "Tim Grohmann",
-                image_src: "https://avatars3.githubusercontent.com/u/14997424"
-            },
-            {
-                name: "Felix Wortmann",
-                image_src: "https://avatars2.githubusercontent.com/u/45035656"
-            },
-            {
-                name: "Florian Redmann",
-                image_src: "teammembers/flo_red.jpg"
-            }
-        ]
+      people: [
+        {
+          name: "Tim Grohmann",
+          image_src: "https://avatars3.githubusercontent.com/u/14997424"
+        },
+        {
+          name: "Felix Wortmann",
+          image_src: "https://avatars2.githubusercontent.com/u/45035656"
+        },
+        {
+          name: "Florian Redmann",
+          image_src: "teammembers/flo_red.jpg"
+        }
+      ]
     };
   }
 };

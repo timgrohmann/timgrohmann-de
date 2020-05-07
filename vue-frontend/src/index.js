@@ -9,11 +9,12 @@ Vue.config.productionTip = false;
 
 Vue.use(Vuetify, {
   theme: {
-    primary: '#ff5722',
-    secondary: '#f06292',
+    primary: '#63A615',
+    secondary: '#814997',
     accent: '#8c9eff',
     error: '#ff9800',
-  }})
+  }
+})
 
 
 new Vue({

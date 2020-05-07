@@ -5,6 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
+const dev = true;
 
 
 module.exports = {
@@ -24,8 +25,7 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          'vue-style-loader',
-          MiniCssExtractPlugin.loader,
+          dev ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
           'style-loader',
           'css-loader',
           'postcss-loader',
@@ -37,7 +37,7 @@ module.exports = {
         use: [
           'style-loader',
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          { loader: 'css-loader', options: { url: false } },
           'stylus-loader'
         ]
       },
@@ -49,7 +49,7 @@ module.exports = {
   },
   entry: ['./src/index.js'],
   output: {
-    filename: 'app.[hash].js'
+    filename: '[name].app.[hash].js'
   },
   plugins: [
     // make sure to include the plugin for the magic
