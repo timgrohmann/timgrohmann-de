@@ -1,11 +1,11 @@
 <template>
   <v-app>
     <HeaderBar />
-    <v-content>
+    <v-main>
       <v-container grid-list-md>
         <router-view />
       </v-container>
-    </v-content>
+    </v-main>
     <v-footer class="pa-2">
       <v-spacer></v-spacer>
       <div>v{{version}} &copy; {{ new Date().getFullYear() }}</div>

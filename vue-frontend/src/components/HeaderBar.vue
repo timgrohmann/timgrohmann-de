@@ -1,17 +1,17 @@
 <template>
   <div>
-    <v-navigation-drawer app v-model="visible" mobile-break-point="10000">
+    <v-navigation-drawer app v-model="visible" mobile-breakpoint="10000">
       <v-list>
-        <v-list-tile v-for="item in items" :key="item.name" :to="item.link">
-          <v-list-tile-action>
+        <v-list-item v-for="item in items" :key="item.name" :to="item.link">
+          <v-list-item-action>
             <v-icon color="secondary">{{item.icon}}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>{{item.name}}</v-list-tile-title>
-        </v-list-tile>
+          </v-list-item-action>
+          <v-list-item-title>{{item.name}}</v-list-item-title>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-toolbar color="primary">
-      <v-toolbar-side-icon @click="visible = !visible"/>
+      <v-app-bar-nav-icon @click="visible = !visible"/>
       <router-link :to="{name: 'LandingPage'}" class="display-1 white--text" style="text-decoration: none;">
         timgrohmann.de
       </router-link>
