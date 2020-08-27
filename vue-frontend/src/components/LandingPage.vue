@@ -9,11 +9,11 @@
           <span class="display-4 secondary--text">Hey,</span> ich bin Tim.
         </v-card-text>
       </v-flex>
-      <v-flex xs12 md4 text-xs-center text-md-right>
+      <v-flex xs12 md4 text-center text-md-right>
         <v-card-text>
           <v-avatar
             color="grey lighten-4"
-            :size="$vuetify.breakpoint.mdAndDown ? '128px' : '256px'"
+            :size="$vuetify.breakpoint.smAndDown ? '128px' : '256px'"
             style="background-image: url(img/ESSEN-05.jpeg); background-size: cover; background-position: 50% 50%;"
           ></v-avatar>
         </v-card-text>
@@ -100,7 +100,7 @@ export default {
   }
   img {
     width: 100%;
-    max-width: 200px;
+    max-width: 128px;
     height: auto;
   }
 }
