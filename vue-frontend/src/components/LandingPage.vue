@@ -34,6 +34,19 @@
         </v-flex>
       </v-layout>
     </v-card-text>
+    <v-card-text>
+      Finde mich auf:
+      <div class="social-links">
+        <a href="https://instagram.com/timgrohmann">
+          <img src="/img/timgrohmann_nametag.png" alt />
+          <span>Instagram</span>
+        </a>
+        <a href="https://instagram.com/timgrohmann">
+          <img src="/img/twitter.png" alt />
+          <span>Twitter</span>
+        </a>
+      </div>
+    </v-card-text>
     <v-card-text>Was ich kann, was ich nicht kann, man weiß es nicht</v-card-text>
   </v-card>
 </template>
@@ -62,5 +75,19 @@ export default {
 <style lang="scss" scoped>
 .no-grow {
   flex-grow: 0;
+}
+
+.social-links {
+  display: flex;
+  a {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 </style>
