@@ -13,7 +13,7 @@ export default {};
 <style lang="scss" scoped>
 $offset: 40px;
 .line {
-  stroke: #814997;
+  stroke: #f89406;
   stroke-width: 10px;
   stroke-dasharray: 0 $offset;
   stroke-linecap: round;
