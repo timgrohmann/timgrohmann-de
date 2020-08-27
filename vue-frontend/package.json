@@ -1,10 +1,10 @@
 {
   "name": "timgrohmann-de",
-  "version": "0.0.22",
+  "version": "0.0.24",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --mode development --hot",
-    "build": "rm -rf dist/* && npm version patch && webpack --mode production"
+    "build": "rimraf dist/* && npm version patch && webpack --mode production"
   },
   "dependencies": {
     "vue": "^2.6.6",
@@ -29,6 +29,7 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.14.0",
     "postcss-loader": "^3.0.0",
+    "rimraf": "^3.0.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "stylus": "^0.54.5",
