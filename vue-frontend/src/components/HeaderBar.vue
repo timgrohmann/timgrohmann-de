@@ -24,6 +24,7 @@ export default {
   data: () => ({
     items: [
       { icon: "face", name: "Über mich", link: {name: "AboutMe"} },
+      { icon: "model_training", name: "Meine Skills", link: {name: "MySkills"} },
     ],
     visible: false
   })

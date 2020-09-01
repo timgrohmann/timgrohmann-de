@@ -4,7 +4,16 @@
       <v-card-title>
         <div class="headline">Über mich</div>
       </v-card-title>
-      <v-card-text>Hier könnte bald etwas stehen.</v-card-text>
+      <v-card-text>
+        <p>
+          {{ age }} Jahre alt (oder jung?), meistens in Mannheim, Frankfurt oder im ICE.
+        </p>
+        <p>
+          Schon seit der Erfindung von LEGO Mindstorms &reg; vom Programmieren begeistert,
+          seitdem ständig auf der Suche nach neuen Herausforderungen.
+        </p>
+        Neugierig geworden? Schreibe mir doch <a href="mailto:mail@timgrohmann.de">gleich eine Mail</a>.
+      </v-card-text>
     </v-card>
     <v-card class="mt-2">
       <v-card-title>
@@ -19,7 +28,7 @@
         </p>
         <p>
           Du kannst mich unter
-          <a href="mailto:kontakt@timgrohmann.de">kontakt@timgrohmann.de</a> erreichen.
+          <a href="mailto:mail@timgrohmann.de">mail@timgrohmann.de</a> erreichen.
         </p>
       </v-card-text>
     </v-card>
@@ -28,23 +37,16 @@
 
 <script>
 export default {
+  computed: {
+    age() {
+      let birthday = new Date("1999-08-04");
+      return Math.floor(
+        new Number((new Date().getTime() - birthday.getTime()) / 31536000000)
+      );
+    },
+  },
   data() {
-    return {
-      people: [
-        {
-          name: "Tim Grohmann",
-          image_src: "https://avatars3.githubusercontent.com/u/14997424"
-        },
-        {
-          name: "Felix Wortmann",
-          image_src: "https://avatars2.githubusercontent.com/u/45035656"
-        },
-        {
-          name: "Florian Redmann",
-          image_src: "teammembers/flo_red.jpg"
-        }
-      ]
-    };
-  }
+    return {};
+  },
 };
 </script>

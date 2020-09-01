@@ -20,7 +20,7 @@
       </v-flex>
     </v-layout>
     <v-card-text>
-      <v-layout row wrap align-center justify-left justify-sm-center hidden-sm-and-down>
+      <v-layout row wrap align-center justify-center hidden-sm-and-down>
         <v-flex class="text-xs-left text-md-right no-grow">
           <!--span class="display-4 secondary--text hidden-md-and-up"></span-->
           <span class="display-1">Ich bin</span>
@@ -34,7 +34,7 @@
           <span class="display-1 animate texts-s">Entwickler.</span>
         </v-flex>
       </v-layout>
-      <v-layout row wrap align-center justify-center hidden-md-and-up>
+      <v-layout row wrap align-center justify-left justify-sm-center hidden-md-and-up>
         <v-flex class="no-grow">
           <span class="display-1">Ich bin</span>
           <br />
@@ -44,12 +44,16 @@
         </v-flex>
       </v-layout>
     </v-card-text>
-    <v-card-text>
-      Du suchst nach persönlicher und kompetenter Unterstützung bei deinem IT-Projekt?
+    <v-card-text class="text-justify text-sm-left">
+      Was heißt das für Dich? Wenn du nach persönlicher und kompetenter Unterstützung für dein
+      <b>digitales Projekt</b> brauchst, bist du bei mir genau an der richtigen Adresse. Vom Design
+      bis zur technischen Umsetzung, von HTML bis Swift biete ich Dir das volle Spektrum.
+      Mehr dazu findest du <router-link :to="{name: 'MySkills'}">hier</router-link>.
     </v-card-text>
     <v-card-text>
       <p>
-      Dann kontaktiere mich <a href="mailto:mail@timgrohmann.de">per Mail</a> oder finde mich auf:
+        Kontaktiere mich direkt
+        <a href="mailto:mail@timgrohmann.de">per Mail</a> oder finde mich auf:
       </p>
       <div class="social-links">
         <a href="https://instagram.com/timgrohmann" target="_blank">
@@ -66,7 +70,6 @@
         </a>
       </div>
     </v-card-text>
-    <v-card-text>Was ich kann, was ich nicht kann, man weiß es nicht</v-card-text>
   </div>
 </template>
 
@@ -100,21 +103,12 @@ export default {
   created() {
     this.timer = setInterval(this.cycle, 5000);
   },
-  computed: {
-    age() {
-      let birthday = new Date("1999-08-04");
-      return Math.floor(
-        new Number((new Date().getTime() - birthday.getTime()) / 31536000000)
-      );
-    },
-  },
   methods: {
     cycle() {
       this.state++;
       if (this.state == this.texts.length) {
         this.state = 0;
       }
-      console.log("Timer", this.state);
       Array.from(document.getElementsByClassName("animate")).forEach((e) => {
         e.classList.add("animate-out");
       });
