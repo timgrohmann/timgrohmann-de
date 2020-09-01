@@ -11,10 +11,12 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar color="primary">
-      <v-app-bar-nav-icon @click="visible = !visible"/>
-      <router-link :to="{name: 'LandingPage'}" class="display-1 white--text" style="text-decoration: none;">
-        timgrohmann.de
+      <router-link :to="{name: 'LandingPage'}">
+        <v-img src="/img/t-white@0.25x.png" width="48px"></v-img>
       </router-link>
+      <v-spacer />
+
+      <v-app-bar-nav-icon @click="visible = !visible" class="white--text" />
     </v-toolbar>
   </div>
 </template>
@@ -23,11 +25,15 @@
 export default {
   data: () => ({
     items: [
-      { icon: "face", name: "Über mich", link: {name: "AboutMe"} },
-      { icon: "model_training", name: "Meine Skills", link: {name: "MySkills"} },
+      { icon: "face", name: "Über mich", link: { name: "AboutMe" } },
+      {
+        icon: "model_training",
+        name: "Meine Skills",
+        link: { name: "MySkills" },
+      },
     ],
-    visible: false
-  })
+    visible: false,
+  }),
 };
 </script>
 

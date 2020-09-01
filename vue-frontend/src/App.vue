@@ -8,7 +8,7 @@
     </v-main>
     <v-footer class="pa-2">
       <v-spacer></v-spacer>
-      <div>v{{version}} &copy; {{ new Date().getFullYear() }}</div>
+      <div class="text--secondary text-body-2">v{{version}} &copy; {{ new Date().getFullYear() }}</div>
     </v-footer>
   </v-app>
 </template>

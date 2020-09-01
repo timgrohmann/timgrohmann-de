@@ -1,6 +1,6 @@
 {
   "name": "timgrohmann-de",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --mode development --hot",

@@ -55,20 +55,19 @@
         Kontaktiere mich direkt
         <a href="mailto:mail@timgrohmann.de">per Mail</a> oder finde mich auf:
       </p>
-      <div class="social-links">
-        <a href="https://instagram.com/timgrohmann" target="_blank">
-          <img src="/img/timgrohmann_nametag.png" alt />
-          <span>Instagram</span>
-        </a>
-        <a href="https://twitter.com/_just_timothy_" target="_blank">
-          <img src="/img/twitter.png" alt />
-          <span>Twitter</span>
-        </a>
-        <a href="https://www.linkedin.com/in/tim-grohmann" target="_blank">
-          <img src="/img/LinkedIn.png" alt />
-          <span>LinkedIn</span>
-        </a>
-      </div>
+      <v-row class="social-links">
+        <v-col
+        v-for="s in social"
+        :key="s.name"
+        cols="6"
+        sm="3"
+        >
+          <a :href="s.href" target="_blank">
+            <img :src="'/img/social/' + s.name.toLowerCase() + '.png'" :alt="s.name" />
+            <span>{{ s.name }}</span>
+          </a>
+        </v-col>
+      </v-row>
     </v-card-text>
   </div>
 </template>
@@ -95,6 +94,24 @@ export default {
           t: "bereit",
           s: "für Dein Projekt.",
         },
+      ],
+      social: [
+        {
+          href: "https://instagram.com/timgrohmann",
+          name: "Instagram"
+        },
+        {
+          href: "https://twitter.com/_just_timothy_",
+          name: "Twitter"
+        },
+        {
+          href: "https://www.linkedin.com/in/tim-grohmann",
+          name: "LinkedIn"
+        },
+        {
+          href: "https://www.github.com/timgrohmann",
+          name: "GitHub"
+        }
       ],
       timer: null,
       state: 0,
@@ -148,14 +165,9 @@ export default {
 }
 
 .social-links {
-  margin: 0 auto;
-  display: flex;
-  a {
-    flex: 1 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 5px;
+  a, span {
+    display: block;
+    text-align: center;
   }
   img {
     width: 100%;
