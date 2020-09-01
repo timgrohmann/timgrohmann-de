@@ -33,7 +33,7 @@ export default {
         link: { name: "MySkills" },
       },
     ],
-    visible: true,
+    visible: false,
   }),
 };
 </script>
