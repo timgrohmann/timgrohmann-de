@@ -30,7 +30,6 @@ export default {
   },
   mounted() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)");
-    console.log(preference.matches);
     this.$vuetify.theme.dark = preference.matches;
     preference.addListener((q) => {
       this.$vuetify.theme.dark = q.matches;
