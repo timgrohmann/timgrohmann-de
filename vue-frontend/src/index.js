@@ -24,6 +24,12 @@ new Vue({
             secondary: '#f89406',
             accent: '#8c9eff',
             error: '#ff9800',
+          },
+          dark: {
+            primary: '#15AB94',
+            secondary: '#f89406',
+            accent: '#8c9eff',
+            error: '#ff9800',
           }
         }
       },
