@@ -70,5 +70,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{ from: 'static', to: '.' }]
     })
-  ]
+  ],
+  devServer: {
+    historyApiFallback: true
+  }
 }

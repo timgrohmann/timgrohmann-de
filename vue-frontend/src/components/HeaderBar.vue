@@ -41,6 +41,11 @@ export default {
         name: "Meine Skills",
         link: { name: "MySkills" },
       },
+      {
+        icon: "delete",
+        name: "Sperrmüll",
+        link: { name: "Sperrmüll" },
+      },
     ],
     visible: false,
   }),
