@@ -46,7 +46,7 @@
     </v-card-text>
     <v-card-text class="text-justify text-sm-left">
       Was heißt das für Dich? Wenn du nach persönlicher und kompetenter Unterstützung für dein
-      <b>digitales Projekt</b> brauchst, bist du bei mir genau an der richtigen Adresse. Vom Design
+      <b>digitales Projekt</b> suchst, bist du bei mir genau an der richtigen Adresse. Vom Design
       bis zur technischen Umsetzung, von HTML bis Swift biete ich Dir das volle Spektrum.
       Mehr dazu findest du <router-link :to="{name: 'MySkills'}">hier</router-link>.
     </v-card-text>
