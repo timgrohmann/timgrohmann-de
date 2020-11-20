@@ -8,7 +8,7 @@
         src="/img/my-skills/webdev.jpg"
       ></v-img>
       <v-card-title>Webentwicklung</v-card-title>
-      <v-card-subtitle>Moderste Technologien und Frameworks</v-card-subtitle>
+      <v-card-subtitle>Modernste Technologien und Frameworks</v-card-subtitle>
       <v-card-text class="text--primary">
         Ich spreche fließend HTML und Javascript.
         Mit Vue, Angular oder React gebe ich Deiner Webanwendung den nötigen Boost!<br>
