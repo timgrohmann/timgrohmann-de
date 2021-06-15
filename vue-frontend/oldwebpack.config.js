@@ -23,13 +23,34 @@ module.exports = {
         loader: 'vue-loader'
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.scss$/,
         use: [
           dev ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
           'style-loader',
           'css-loader',
-          'postcss-loader',
-          'sass-loader'
+          //'postcss-loader',
+          {
+            loader: 'sass-loader',
+            /*options: {
+              data: "@import '@/styles/variables.scss';"
+            },*/
+          }
+        ]
+      },
+      {
+        test: /\.sass$/,
+        use: [
+          dev ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
+          'style-loader',
+          'css-loader',
+          //'postcss-loader',
+          {
+            loader: 'sass-loader',
+            /*options: {
+              data: "@import '@/styles/variables.scss'",
+              indentedSyntax: true
+            },*/
+          }
         ]
       },
       {
@@ -50,6 +71,11 @@ module.exports = {
   entry: ['./src/index.js'],
   output: {
     filename: '[name].app.[hash].js'
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src/'),
+    }
   },
   plugins: [
     // make sure to include the plugin for the magic

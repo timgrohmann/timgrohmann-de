@@ -1,8 +1,8 @@
 import Vue from 'vue';
-import Vuetify from 'vuetify'
+import Vuetify from 'vuetify/lib/framework'
 import App from './App.vue';
 import store from './store'
-import './main.styl'
+import './main.scss'
 import 'vuetify/dist/vuetify.min.css'
 import router from './router'
 
