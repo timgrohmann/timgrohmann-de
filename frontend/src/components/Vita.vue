@@ -1,28 +1,28 @@
 <template>
   <div class="vita">
     <div class="timeline">
-      <div class="line"></div>
       <ul>
         <li>HEUTE</li>
         <li>2021</li>
         <li>2018</li>
         <li>2010</li>
       </ul>
+      <div class="line"></div>
     </div>
     <div class="texts">
       <div class="row">
         <div class="col-md-6 align-center justify-center d-flex flex-column">
-          <div>
+          <div class="vita-block">
             <p class="name">TU Darmstadt</p>
             <p class="time">ab Oktober 2021</p>
           </div>
-          <div>
+          <div class="vita-block">
             <p class="name">DHBW Mannheim</p>
             <p class="time">2018-2021</p>
           </div>
         </div>
         <div class="col-md-6 align-center justify-center d-flex flex-column">
-          <div>
+          <div class="vita-block">
             <p class="name">DB Systel AG</p>
             <p class="time">seit Oktober 2018</p>
           </div>
@@ -30,8 +30,11 @@
       </div>
       <div class="row">
         <div class="col-md-12 align-center justify-center d-flex flex-column">
-          <p class="name">Gymnasium Carolinum Bernburg</p>
-          <p class="time">2010-2018</p>
+          <div class="vita-block">
+            <p class="name">Gymnasium Carolinum Bernburg</p>
+            <span>Abschluss: 1,0</span>
+            <p class="time">2010-2018</p>
+          </div>
         </div>
       </div>
     </div>
@@ -39,33 +42,84 @@
 </template>
 
 <style lang="scss" scoped>
+$block-height: 100px;
+
 .vita {
   margin: 0 auto;
   text-align: center;
   display: flex;
   padding: 16px;
+  width: 70%;
+  @media (max-width: 960px) {
+    width: 100%;
+  }
 }
 
 .texts {
   flex-basis: 100%;
+  .row {
+    margin: 0;
+    & > div {
+      padding: 0;
+    }
+  }
 }
 
 .name {
   font-size: 1.25rem;
+  margin-bottom: 5px;
 }
-.timeline {
+
+.vita-block {
+  min-height: $block-height;
   display: flex;
-  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timeline {
+  @media (max-width: 600px) {
+    display: none;
+  }
+  display: flex;
+  text-align: right;
   ul {
     height: 100%;
+    list-style: none;
+    padding-left: 15px;
+    position: relative;
   }
   .line {
     width: 0;
     height: 100%;
-    border-left: 1px solid black;
+    border-left: 1px solid grey;
   }
   li {
     margin-left: 0px;
+    margin-right: 10px;
+    height: $block-height;
+    @media (max-width: 960px) {
+      &:nth-child(2) {
+        height: 140px;
+      }
+    }
+  }
+  li:last-child {
+    height: auto;
+  }
+  li::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-top: -18px;
+    margin-right: -6px;
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+    border: 2px solid var(--v-secondary-base);
+    outline: 2px solid white;
+    background: white;
   }
 }
 </style>

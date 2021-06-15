@@ -19,6 +19,9 @@ export default new Vuetify({
                 accent: '#8c9eff',
                 error: '#ff9800',
             }
+        },
+        options: {
+            customProperties: true
         }
     },
     icons: {

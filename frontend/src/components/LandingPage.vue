@@ -69,7 +69,7 @@
       biete ich Dir das volle Spektrum. Mehr dazu findest du
       <router-link :to="{ name: 'MySkills' }">hier</router-link>.
     </v-card-text>
-    <!--Vita /-->
+    <Vita />
     <v-card-text>
       <p>
         Kontaktiere mich direkt
@@ -92,12 +92,12 @@
 
 <script>
 import DottedLine from "./DottedLine.vue";
-// import Vita from "./Vita.vue";
+import Vita from "./Vita.vue";
 
 export default {
   components: {
     DottedLine,
-    // Vita,
+    Vita,
   },
   data() {
     return {
