@@ -26,7 +26,7 @@
       </v-flex>
     </v-layout>
     <v-card-text>
-      <v-layout row wrap align-center justify-center hidden-sm-and-down>
+      <v-layout row wrap align-center justify-center hidden-md-and-down>
         <v-flex class="text-xs-left text-md-right no-grow">
           <!--span class="display-4 secondary--text hidden-md-and-up"></span-->
           <span class="display-1">Ich bin</span>
@@ -48,7 +48,8 @@
         align-center
         justify-left
         justify-sm-center
-        hidden-md-and-up
+        hidden-lg-and-up
+        id="textwheel-mobile"
       >
         <v-flex class="no-grow">
           <span class="display-1">Ich bin</span>
@@ -211,5 +212,9 @@ export default {
   transition: all ease-out 0.1s;
   transform: translateY(10px);
   opacity: 0;
+}
+
+#textwheel-mobile > div {
+  height: 200px;
 }
 </style>
