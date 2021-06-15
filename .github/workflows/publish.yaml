@@ -26,5 +26,5 @@ jobs:
           server: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          local-dir: ./frontend/dist
-          server-dir: /timgrohmann.de
+          local-dir: ./frontend/dist/
+          server-dir: /timgrohmann.de/
