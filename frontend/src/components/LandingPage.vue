@@ -92,12 +92,12 @@
 
 <script>
 import DottedLine from "./DottedLine.vue";
-import Vita from "./Vita.vue";
+// import Vita from "./Vita.vue";
 
 export default {
   components: {
     DottedLine,
-    Vita,
+    // Vita,
   },
   data() {
     return {
