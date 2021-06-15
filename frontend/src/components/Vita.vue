@@ -32,7 +32,7 @@
         <div class="col-md-12 align-center justify-center d-flex flex-column">
           <div class="vita-block">
             <p class="name">Gymnasium Carolinum Bernburg</p>
-            <span>Abschluss: 1,0</span>
+            <i>Abitur mit 1,0</i>
             <p class="time">2010-2018</p>
           </div>
         </div>
