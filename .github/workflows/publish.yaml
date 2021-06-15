@@ -20,3 +20,11 @@ jobs:
         working-directory: frontend
       - run: npm run build
         working-directory: frontend
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          local-dir: ./frontend/dist
+          server-dir: /timgrohmann.de
