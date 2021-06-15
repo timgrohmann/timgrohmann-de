@@ -1,8 +1,8 @@
 <template>
-  <div class="vita">
+  <div class="vita triggered">
     <div class="timeline">
       <ul>
-        <li>HEUTE</li>
+        <li>heute</li>
         <li>2021</li>
         <li>2018</li>
         <li>2010</li>
@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-6 align-center justify-center d-flex flex-column">
           <div class="vita-block">
-            <p class="name">DB Systel AG</p>
+            <p class="name">DB Systel GmbH</p>
             <p class="time">seit Oktober 2018</p>
           </div>
         </div>
@@ -98,6 +98,10 @@ $block-height: 100px;
     margin-left: 0px;
     margin-right: 10px;
     height: $block-height;
+    transform: translateX(-15px);
+    opacity: 0;
+    animation: opacity-in-left 300ms forwards;
+    font-style: italic;
     @media (max-width: 960px) {
       &:nth-child(2) {
         height: 140px;
@@ -113,7 +117,7 @@ $block-height: 100px;
     position: absolute;
     right: 0;
     margin-top: -18px;
-    margin-right: -6px;
+    margin-right: -16px;
     width: 11px;
     height: 11px;
     border-radius: 100%;
@@ -121,7 +125,35 @@ $block-height: 100px;
     outline: 2px solid white;
     background: white;
   }
+  @for $i from 0 to 4 {
+    li:nth-child(#{4- $i}) {
+      animation-delay: 100ms + $i * 100ms;
+    }
+  }
 }
+
+@keyframes opacity-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .theme--dark .timeline li::after {
   outline-color: #121212;
   background: #121212;

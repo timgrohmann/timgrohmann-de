@@ -3,4 +3,10 @@
     src: url("/font/JetBrainsMono-Regular.woff")
 }
 
+@font-face {
+    font-family: JBMono;
+    src: url("/font/JetBrainsMono-Italic.woff");
+    font-style: italic;
+}
+
 $body-font-family: "JBMono";
