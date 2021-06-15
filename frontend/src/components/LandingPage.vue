@@ -1,7 +1,9 @@
 <template>
   <div>
     <v-card-title class="d-none">
-      <div class="headline grey darken-1">Das wird timgrohmann.de - BAUSTELLE</div>
+      <div class="headline grey darken-1">
+        Das wird timgrohmann.de - BAUSTELLE
+      </div>
     </v-card-title>
     <v-layout row wrap justify-center>
       <v-flex xs12 md8 align-self-center>
@@ -14,7 +16,11 @@
           <v-avatar
             color="grey lighten-4"
             :size="$vuetify.breakpoint.smAndDown ? '128px' : '256px'"
-            style="background-image: url(img/ESSEN-05.jpeg); background-size: cover; background-position: 50% 50%;"
+            style="
+              background-image: url(img/ESSEN-05.jpeg);
+              background-size: cover;
+              background-position: 50% 50%;
+            "
           ></v-avatar>
         </v-card-text>
       </v-flex>
@@ -29,42 +35,53 @@
           <DottedLine />
         </v-flex>
         <v-flex class="no-grow">
-          <span class="display-4 secondary--text animate texts-t">Full Stack</span>
+          <span class="display-4 secondary--text animate texts-t"
+            >Full Stack</span
+          >
           <br />
           <span class="display-1 animate texts-s">Entwickler.</span>
         </v-flex>
       </v-layout>
-      <v-layout row wrap align-center justify-left justify-sm-center hidden-md-and-up>
+      <v-layout
+        row
+        wrap
+        align-center
+        justify-left
+        justify-sm-center
+        hidden-md-and-up
+      >
         <v-flex class="no-grow">
           <span class="display-1">Ich bin</span>
           <br />
-          <span class="display-3 secondary--text animate texts-t">Full Stack</span>
+          <span class="display-3 secondary--text animate texts-t"
+            >Full Stack</span
+          >
           <br />
           <span class="display-1 animate texts-s">Entwickler.</span>
         </v-flex>
       </v-layout>
     </v-card-text>
     <v-card-text class="text-justify text-sm-left">
-      Was heißt das für Dich? Wenn du nach persönlicher und kompetenter Unterstützung für dein
-      <b>digitales Projekt</b> suchst, bist du bei mir genau an der richtigen Adresse. Vom Design
-      bis zur technischen Umsetzung, von HTML bis Swift biete ich Dir das volle Spektrum.
-      Mehr dazu findest du <router-link :to="{name: 'MySkills'}">hier</router-link>.
+      Was heißt das für Dich? Wenn du nach persönlicher und kompetenter
+      Unterstützung für dein
+      <b>digitales Projekt</b> suchst, bist du bei mir genau an der richtigen
+      Adresse. Vom Design bis zur technischen Umsetzung, von HTML bis Swift
+      biete ich Dir das volle Spektrum. Mehr dazu findest du
+      <router-link :to="{ name: 'MySkills' }">hier</router-link>.
     </v-card-text>
-    <Vita />
+    <!--Vita /-->
     <v-card-text>
       <p>
         Kontaktiere mich direkt
         <a href="mailto:mail@timgrohmann.de">per Mail</a> oder finde mich auf:
       </p>
       <v-row class="social-links">
-        <v-col
-        v-for="s in social"
-        :key="s.name"
-        cols="6"
-        sm="3"
-        >
+        <v-col v-for="s in social" :key="s.name" cols="6" sm="3">
           <a :href="s.href" target="_blank">
-            <img :src="'/img/social/' + s.name.toLowerCase() + '.png'" :alt="s.name" />
+            <img
+              :src="'/img/social/' + s.name.toLowerCase() + '.png'"
+              :alt="s.name"
+            />
             <span>{{ s.name }}</span>
           </a>
         </v-col>
@@ -75,12 +92,12 @@
 
 <script>
 import DottedLine from "./DottedLine.vue";
-import Vita from "./Vita.vue"
+import Vita from "./Vita.vue";
 
 export default {
   components: {
     DottedLine,
-    Vita
+    Vita,
   },
   data() {
     return {
@@ -101,20 +118,20 @@ export default {
       social: [
         {
           href: "https://instagram.com/timgrohmann",
-          name: "Instagram"
+          name: "Instagram",
         },
         {
           href: "https://twitter.com/_just_timothy_",
-          name: "Twitter"
+          name: "Twitter",
         },
         {
           href: "https://www.linkedin.com/in/tim-grohmann",
-          name: "LinkedIn"
+          name: "LinkedIn",
         },
         {
           href: "https://www.github.com/timgrohmann",
-          name: "GitHub"
-        }
+          name: "GitHub",
+        },
       ],
       timer: null,
       state: 0,
@@ -168,7 +185,8 @@ export default {
 }
 
 .social-links {
-  a, span {
+  a,
+  span {
     display: block;
     text-align: center;
   }
