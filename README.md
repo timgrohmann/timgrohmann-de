@@ -1,0 +1,1 @@
+[![NPM CI](https://github.com/timgrohmann/timgrohmann-de/actions/workflows/publish.yaml/badge.svg)](https://github.com/timgrohmann/timgrohmann-de/actions/workflows/publish.yaml)

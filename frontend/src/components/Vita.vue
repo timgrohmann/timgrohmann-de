@@ -122,6 +122,10 @@ $block-height: 100px;
     background: white;
   }
 }
+.theme--dark .timeline li::after {
+  outline-color: #121212;
+  background: #121212;
+}
 </style>
 
 <script>
