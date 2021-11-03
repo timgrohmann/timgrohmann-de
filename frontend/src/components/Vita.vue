@@ -18,6 +18,7 @@
           </div>
           <div class="vita-block">
             <p class="name">DHBW Mannheim</p>
+            <i>GPA 1,7</i>
             <p class="time">2018-2021</p>
           </div>
         </div>
