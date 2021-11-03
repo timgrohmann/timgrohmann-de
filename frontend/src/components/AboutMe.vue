@@ -19,8 +19,8 @@
         <p>Diese Seite wird betrieben von:</p>
         <p>
           Tim Grohmann
-          <br />T 6 10
-          <br />68161 Mannheim
+          <br />Elbestraße 29
+          <br />60329 Frankfurt
         </p>
         <p>
           Du kannst mich unter

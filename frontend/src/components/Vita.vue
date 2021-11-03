@@ -14,7 +14,7 @@
         <div class="col-md-6 align-center justify-center d-flex flex-column">
           <div class="vita-block">
             <p class="name">TU Darmstadt</p>
-            <p class="time">ab Oktober 2021</p>
+            <p class="time">seit Oktober 2021</p>
           </div>
           <div class="vita-block">
             <p class="name">DHBW Mannheim</p>
